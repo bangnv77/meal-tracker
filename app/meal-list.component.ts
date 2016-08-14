@@ -8,7 +8,11 @@ import { NewMealComponent } from './new-meal.component';
   inputs: ['mealList'],
   directives: [MealDisplayComponent, NewMealComponent],
   template: `
-    <h2>List of meals will go here</h2>
+    <div class="jumbotron">
+      <h3>Total number of meals: {{ mealList.length }}</h3>
+      <h3>Total calories: {{ totalCalories() }}</h3>
+      <h3>Average calories per meal: {{ avgCalories() }}</h3>
+    </div>
     <div *ngFor="#meal of mealList">
       <meal-display [meal]="meal"></meal-display>
     </div>
@@ -21,8 +25,18 @@ export class MealListComponent {
     this.mealList = [new Meal("The big pig", "Amsterdam amsterdam", 800), new Meal("The Reuburger", "blah", 700)];
   }
   addMeal(newMeal: Meal) {
-    console.log("Event heard", newMeal);
     this.mealList.push(newMeal);
-    console.log(this.mealList);
+  }
+
+  totalCalories(): number {
+    var total = 0;
+    this.mealList.forEach(function(meal) {
+      total += meal.totalCal;
+    })
+    return total;
+  }
+
+  avgCalories(): number {
+    return (this.totalCalories()/this.mealList.length);
   }
 }
