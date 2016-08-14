@@ -8,8 +8,8 @@ import { Meal } from './meal.model';
 
 export class caloriePipe implements PipeTransform {
   transform(input: Meal[], args) {
-    var minOrMax: string = args[1];
-    var calorieFilter: number = args[0];
+    var minOrMax: string = args[0];
+    var calorieFilter: number = args[1];
 
     if (minOrMax === "All") return input;
     if (minOrMax === "Min.") return input.filter((meal) => (meal.totalCal >= calorieFilter));
