@@ -5,12 +5,14 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   outputs: ['newMealEvent'],
   template: `
+  <div class="jumbotron">
     <h4>Log New Meal</h4>
     <label *ngIf="(formWarning)">Please fill out description and calorie fields.</label>
     <input type="text" placeholder="Description" #newDescription/>
     <input type="text" placeholder="Comments" #newComments/>
     <input type="number" min="0" placeholder="Calories" #newCalories/>
     <button (click)="submitMealForm(newDescription, newComments, newCalories)">Submit</button>
+  </div>  
   `
 })
 

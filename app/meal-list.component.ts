@@ -28,17 +28,17 @@ import { caloriePipe } from './calories.pipe';
   `
 })
 export class MealListComponent {
-  public mealList: Meal[];
+  public mealList: Meal[] = [];
   public minOrMaxCals: string = "All";
   public calorieFilter: number = 0;
   constructor() {
-    this.mealList = [new Meal("The big pig", "Amsterdam amsterdam", 800), new Meal("The Reuburger", "blah", 700)];
+
   }
 
   changeMinOrMax(newValue: string) {
     this.minOrMaxCals = newValue;
   }
-  
+
   addMeal(newMeal: Meal) {
     this.mealList.push(newMeal);
   }
