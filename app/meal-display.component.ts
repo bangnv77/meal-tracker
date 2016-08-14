@@ -7,7 +7,7 @@ import { EditMealComponent } from './edit-meal.component';
   inputs: ['meal'],
   directives: [EditMealComponent],
   template: `
-    <div class="jumbotron">
+    <div class="meal">
       <div class="page-header">
         <h4>{{meal.description}}</h4>
         <h5>{{meal.totalCal}} calories</h5>
