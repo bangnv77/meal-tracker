@@ -13,13 +13,13 @@ import { EditMealComponent } from './edit-meal.component';
         <h5>{{meal.totalCal}} calories</h5>
       </div>
       <p>{{meal.comments}}</p>
-      <edit-meal></edit-meal>
+      <edit-meal [meal]='meal'></edit-meal>
     </div>
   `
 })
 export class MealDisplayComponent {
   public mealList: Meal[];
   constructor(){
-    
+
   }
 }

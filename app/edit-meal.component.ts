@@ -7,6 +7,9 @@ import { Meal } from './meal.model';
   template: `
     <a href="#" *ngIf="!isEditing" (click)="toggleEdit()">Edit Details</a>
     <div *ngIf="isEditing">
+    <input type="text" placeholder="Description" [(ngModel)]="meal.description">
+    <input type="text" placeholder="Comments" [(ngModel)]="meal.comments">
+    <input type="number" min="0" placeholder="Calories" [(ngModel)]="meal.totalCal">
       <a href="#" (click)="toggleEdit()">Done Editing</a>
     </div>
   `

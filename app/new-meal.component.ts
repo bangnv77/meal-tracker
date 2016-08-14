@@ -5,6 +5,7 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   outputs: ['newMealEvent'],
   template: `
+    <h4>Log New Meal</h4>
     <label *ngIf="(formWarning)">Please fill out description and calorie fields.</label>
     <input type="text" placeholder="Description" #newDescription/>
     <input type="text" placeholder="Comments" #newComments/>
