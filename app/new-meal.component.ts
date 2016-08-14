@@ -6,12 +6,10 @@ import { Meal } from './meal.model';
   outputs: ['newMealEvent'],
   template: `
     <label *ngIf="(formWarning)">Please fill out description and calorie fields.</label>
-    <form>
-      <input type="text" placeholder="Description" #newDescription/>
-      <input type="text" placeholder="Comments" #newComments/>
-      <input type="number" min="0" placeholder="Calories" #newCalories/>
-      <button (click)="submitMealForm(newDescription, newComments, newCalories)">Submit</button>
-    </form>
+    <input type="text" placeholder="Description" #newDescription/>
+    <input type="text" placeholder="Comments" #newComments/>
+    <input type="number" min="0" placeholder="Calories" #newCalories/>
+    <button (click)="submitMealForm(newDescription, newComments, newCalories)">Submit</button>
   `
 })
 
