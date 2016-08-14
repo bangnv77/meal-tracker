@@ -10,7 +10,7 @@ import { NewMealComponent } from './new-meal.component';
   template: `
     <h2>List of meals will go here</h2>
     <div *ngFor="#meal of mealList">
-      <meal-display></meal-display>
+      <meal-display [meal]="meal"></meal-display>
     </div>
     <new-meal (newMealEvent)="addMeal($event)"></new-meal>
   `
