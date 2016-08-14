@@ -2,7 +2,7 @@
 
 #### A simple webapp for tracking meals eaten in a day.
 
-#### By Carl Egbert
+#### Re-practice following CE
 
 ## Description
 
